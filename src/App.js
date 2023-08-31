@@ -25,10 +25,13 @@ const App = () => {
     });
   };
 
+
+  // выводим это если вообще нету записей
   let content = (
     <p style={{ textAlign: 'center' }}>No goals found. Maybe add one?</p>
   );
 
+  // проверка есть ли записи в ту ду листе
   if (courseGoals.length > 0) {
     content = (
       <CourseGoalList items={courseGoals} onDeleteItem={deleteItemHandler} />
